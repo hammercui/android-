@@ -13,7 +13,7 @@
 
 ## 目录
 
-- [x] [需求分析](###  需求分析)
+- [x] [需求分析](#需求分析)
 - [x] 系统设计
 - [x] 详细设计
 - [ ] 编码
@@ -27,11 +27,11 @@
 - [ ] fresco是如何优化图片内存的？
 - [ ] android目前最优秀的裁切工具ucrop，是不是得研究下源码？
 - [ ] android Intent Action 大全
-- [x] [android studio 如何打包library并上传本地仓库，如何上传网络仓库](### android studio 如何打包library并上传本地仓库，如何上传网络仓库)
+- [x] [android studio 如何打包library并上传本地仓库，如何上传网络仓库](#android studio 如何打包library并上传本地仓库，如何上传网络仓库)
 
 ## 正文
 
-### android studio 如何打包library并上传本地仓库，如何上传网络仓库
+###android studio 如何打包library并上传本地仓库，如何上传网络仓库
 
 使用文件管理library，显得既低效又混乱，考虑使用gradle，把librar打包之后上传本地maven库获得网络库。
 
@@ -42,7 +42,7 @@
 2. 网络库
 
 
-###  需求分析
+###需求分析
 
 
 
