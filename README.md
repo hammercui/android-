@@ -1,13 +1,11 @@
 
-# rn0.39填坑
-
+#rn0.39填坑
 
 1.  Android版本下Text lineHeight必须为int型
 2.  ios版本图片不再支持borderTopLeftRadius等四个角的设定，VIew还支持
 3.  image 的resizeMode 模式如何使用
 
-
-# android填坑
+#android填坑
 
 >主要记录在Android开发过程中遇到的问题,解决方案，以及引发的思考。
 
@@ -31,15 +29,33 @@
 
 ## 正文
 
-###android studio 如何打包library并上传本地仓库，如何上传网络仓库
+###android studio 如何打包library并上传本地仓库，或者上传网络仓库
 
-使用文件管理library，显得既低效又混乱，考虑使用gradle，把librar打包之后上传本地maven库获得网络库。
+使用文件模式管理library，显得既低效又混乱。考虑使用gradle脚本打包librar之后，上传本地maven库获得网络库，
+网络库包括:
 
+ 1. jcenter远程仓库(公共)，需要注册。
+ 2. github搭建的远程仓库(公共)
+ 3. nexus搭建的maven私服。
 
-1. 本地库
+执行打包上传aar的命令：
 
+```
+ ./gradlew -p PImagePicker(你的library的name) clean build uploadArchives -info
+```
 
-2. 网络库
+####本地库
+首先确定我们新建的`module`是`Android library`,可以在`module`的`build.gradle`看到`apply plugin: 'com.android.library'`
+新增如下
+
+```
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+```
+
+![image](/image/test.jpg)
+
+####网络库
 
 
 ###需求分析
